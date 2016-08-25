@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	_ "./server"
+	"./server"
 )
 
 func CallBack() {
