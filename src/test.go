@@ -1,9 +1,11 @@
 package main
 
 import (
+	"data/config"
 	"fmt"
+	"os"
 
-	_ "./server"
+	"./server"
 )
 
 func CallBack() {
@@ -13,6 +15,9 @@ func CallBack() {
 }
 
 func main() {
-	server.OnStart(CallBack)
-	//CallBack()
+	if config.OnIsDev() || len(os.Args) == 0 {
+		CallBack()
+	} else {
+		server.OnStart(CallBack)
+	}
 }

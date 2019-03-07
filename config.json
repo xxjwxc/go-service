@@ -1,0 +1,7 @@
+{
+"以下为通用配置":"--------------------------------------------",
+"service_name":"jewelryserver",
+"service_displayname":"jewelryserver",
+"sercice_desc":"jewelryserver",
+"is_dev":true
+}
