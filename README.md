@@ -12,3 +12,5 @@ sudo ./test remove to remove your service
 
 sudo ./test run to start server without service
 
+支持windows linux 服务器创建服务启动。
+有查看服务器状态
