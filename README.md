@@ -1,5 +1,5 @@
 # GO-Service
-golang service and login class
+golang service
 
 using
 sudo ./test install to install server
