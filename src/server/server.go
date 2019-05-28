@@ -5,14 +5,24 @@ import (
 	"os"
 	"time"
 
-	"data/config"
-
 	"github.com/jander/golog/logger"
 	"github.com/kardianos/service"
 )
 
+var name, displayName, desc string
+
+func OnInit(n, dn, d string) {
+	name = n
+	displayName = dn
+	desc = d
+}
+
 func OnStart(callBack func()) {
-	name, displayName, desc := config.GetServiceConfig()
+	if len(name) == 0 {
+		fmt.Printf("Service init faild.\n")
+		return
+	}
+	//name, displayName, desc := config.GetServiceConfig()
 	p := &program{callBack}
 	sc := &service.Config{
 		Name:        name,
@@ -132,6 +142,6 @@ func (p *program) Stop(s service.Service) error {
 	return nil
 }
 
-type ServiceTools interface {
+type IServiceTools interface {
 	IsStart(name string) (status int, err error)
 }

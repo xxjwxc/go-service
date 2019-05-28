@@ -5,8 +5,8 @@ import (
 	"github.com/btcsuite/winsvc/svc"
 )
 
-type WindowsServiceTools struct {
-	i ServiceTools
+type ServiceTools struct {
+	i IServiceTools
 }
 
 func IsStart(name string) (st int, err error) {
