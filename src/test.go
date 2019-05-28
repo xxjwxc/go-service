@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/xie1xiao1jun/go-service/src/data/config"
 	"github.com/xie1xiao1jun/go-service/src/server"
@@ -11,6 +12,11 @@ import (
 func CallBack() {
 	//
 	fmt.Println("111")
+	for {
+		ticker := time.NewTicker(1 * time.Second)
+		<-ticker.C
+		fmt.Println("yyyyy")
+	}
 	//-----------------------------end
 }
 

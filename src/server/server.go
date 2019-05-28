@@ -81,7 +81,8 @@ func OnStart(callBack func()) {
 				ticker := time.NewTicker(1 * time.Second)
 				<-ticker.C
 
-				st, err := IsStart(name)
+				var s ServiceTools
+				st, err := s.IsStart(name)
 				if err != nil {
 					fmt.Println(err)
 					return
@@ -101,8 +102,8 @@ func OnStart(callBack func()) {
 					fmt.Printf("Failed to stop: %s\n", err)
 					return
 				}
-
-				st, err := IsStart(name)
+				var s ServiceTools
+				st, err := s.IsStart(name)
 				if err != nil {
 					fmt.Println(err)
 					return
@@ -117,10 +118,9 @@ func OnStart(callBack func()) {
 			}
 		}
 		return
-	} else {
-		fmt.Print("Failed to read args\n")
-		//return
 	}
+
+	fmt.Print("Failed to read args\n")
 
 	if err = s.Run(); err != nil {
 		logger.Error(err)

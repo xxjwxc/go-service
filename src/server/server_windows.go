@@ -9,7 +9,7 @@ type ServiceTools struct {
 	i IServiceTools
 }
 
-func IsStart(name string) (st int, err error) {
+func (s *ServiceTools) IsStart(name string) (st int, err error) {
 	var m *mgr.Mgr
 	m, err = mgr.Connect()
 	if err != nil {
