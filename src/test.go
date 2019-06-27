@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/xie1xiao1jun/go-service/src/data/config"
-	"github.com/xie1xiao1jun/go-service/src/server"
+	"github.com/xxjwxc/go-service/src/data/config"
+	"github.com/xxjwxc/go-service/src/server"
 )
 
 func CallBack() {
