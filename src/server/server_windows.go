@@ -6,7 +6,7 @@ import (
 )
 
 type ServiceTools struct {
-	i IServiceTools
+	//i IServiceTools
 }
 
 func (s *ServiceTools) IsStart(name string) (st int, err error) {
