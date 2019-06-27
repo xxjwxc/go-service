@@ -25,7 +25,6 @@ func main() {
 		CallBack()
 	} else {
 		//name, displayName, desc := config.GetServiceConfig()
-		server.OnInit(config.GetServiceConfig())
-		server.OnStart(CallBack)
+		server.On(config.GetServiceConfig()).Start(CallBack)
 	}
 }
