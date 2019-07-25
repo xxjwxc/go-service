@@ -21,7 +21,6 @@ func On(n, dn, d string) *Service {
 		displayName: dn,
 		desc:        d,
 	}
-
 }
 
 func (sv *Service) Start(callBack func()) {
